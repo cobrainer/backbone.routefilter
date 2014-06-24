@@ -1,4 +1,4 @@
-/*! backbone.routefilter - v0.2.0 - 2014-05-06
+/*! backbone.routefilter - v0.2.1 - 2014-06-24
 * https://github.com/boazsender/backbone.routefilter
 * Copyright (c) 2014 Boaz Sender; Licensed MIT */
 
@@ -58,7 +58,7 @@
         // the user to return false from within the before filter
         // to prevent the original route callback and after
         // filter from running.
-        var callbackArgs = [ route, _.toArray(arguments) ];
+        var callbackArgs = [ route, _.toArray(arguments), callback ];
         var beforeCallback;
 
         if ( _.isFunction(this.before) ) {
